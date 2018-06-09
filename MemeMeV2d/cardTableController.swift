@@ -14,20 +14,14 @@ class MemeTableController: UITableViewController
 {
     
     @IBOutlet var memeTableView: UITableView!
-    
-  
 
     override func viewWillAppear(_ animated: Bool)
     {
-     }
+    }
     
     override func viewDidLoad()
     {
     }
-    
-    @IBAction func unwindToFirstVC(segue:UIStoryboardSegue) { }
-
-
     
     var myMemes = (UIApplication.shared.delegate as! AppDelegate).myMemes
     
@@ -59,8 +53,7 @@ class MemeTableController: UITableViewController
         
         let meme = (UIApplication.shared.delegate as! AppDelegate).myMemes[(indexPath as NSIndexPath).row]
         
-        cell.textLabel?.text = meme.topTextField
-        cell.detailTextLabel?.text = meme.bottomTextField
+        cell.textLabel?.text = meme.topTextField! + " " + meme.bottomTextField!
         cell.imageView?.image = meme.originalImage
         
         return cell

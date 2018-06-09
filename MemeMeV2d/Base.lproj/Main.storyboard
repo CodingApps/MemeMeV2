@@ -54,7 +54,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem width="244" style="plain" systemItem="fixedSpace" id="Fxx-yt-X83"/>
-                                    <barButtonItem title="ViewMemes" id="GZt-wk-1YD">
+                                    <barButtonItem title="View Memes" id="GZt-wk-1YD">
                                         <connections>
                                             <segue destination="TjI-f7-ogX" kind="presentation" id="R9V-1b-dSV"/>
                                         </connections>
@@ -138,12 +138,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y67-HQ-6ON"/>
                     </view>
+                    <connections>
+                        <outlet property="detailView" destination="HtF-oY-DFM" id="r6r-YJ-rsA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Xr-HK-bvb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3504.8000000000002" y="855.9220389805098"/>
         </scene>
-        <!--View Controller-->
+        <!--Meme Table Controller-->
         <scene sceneID="yCI-OQ-dSu">
             <objects>
                 <tableViewController id="ash-DC-9R6" customClass="MemeTableController" customModule="MemeMeV2d" customModuleProvider="target" sceneMemberID="viewController">
@@ -152,11 +155,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeTableCell" id="bLx-vz-YDj">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeTableCell" rowHeight="87" id="bLx-vz-YDj">
+                                <rect key="frame" x="0.0" y="28" width="375" height="87"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bLx-vz-YDj" id="rFI-hW-Qvh">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -166,8 +169,8 @@
                             <outlet property="delegate" destination="ash-DC-9R6" id="hGG-ie-QFf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="View Controller" id="uNK-5J-prI">
-                        <barButtonItem key="rightBarButtonItem" title="EditMeme" id="nVG-a0-ONk">
+                    <navigationItem key="navigationItem" id="uNK-5J-prI">
+                        <barButtonItem key="rightBarButtonItem" title="Edit Meme" id="nVG-a0-ONk">
                             <connections>
                                 <segue destination="LfO-sX-mP0" kind="presentation" id="hGG-tr-2Xe"/>
                             </connections>
@@ -176,7 +179,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Bg-Bm-9l1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2506" y="-289"/>
+            <point key="canvasLocation" x="2504.8000000000002" y="-289.20539730134936"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2QT-Dv-tsz">
@@ -237,7 +240,7 @@
         <!--Meme Collection View Controller-->
         <scene sceneID="KM0-Wb-vcX">
             <objects>
-                <collectionViewController id="cHq-53-iWu" customClass="memeCollectionViewController" customModule="memeME2" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="cHq-53-iWu" customClass="memeCollectionViewController" customModule="MemeMeV2d" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Nei-PV-IN9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -289,7 +292,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="aGL-rX-ifN">
-                        <barButtonItem key="rightBarButtonItem" title="EditMeme" id="spS-Cs-nT6">
+                        <barButtonItem key="rightBarButtonItem" title="Edit Meme" id="spS-Cs-nT6">
                             <connections>
                                 <segue destination="LfO-sX-mP0" kind="presentation" id="eXM-hL-tCS"/>
                             </connections>
