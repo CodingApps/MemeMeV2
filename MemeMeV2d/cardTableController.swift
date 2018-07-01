@@ -55,7 +55,7 @@ class MemeTableController: UITableViewController
         
         cell.textLabel?.text = meme.topTextField! + " " + meme.bottomTextField!
         cell.imageView?.image = meme.originalImage
-        
+        cell.imageView?.contentMode = .scaleAspectFit
         return cell
     }
 }

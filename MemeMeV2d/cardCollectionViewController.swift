@@ -61,6 +61,7 @@ class memeCollectionViewController: UICollectionViewController
         cell.highText?.text = meme.topTextField
         cell.lowText?.text = meme.bottomTextField
         cell.memeImage?.image = meme.originalImage
+        cell.memeImage?.contentMode = .scaleAspectFit
         
         return cell
     }
