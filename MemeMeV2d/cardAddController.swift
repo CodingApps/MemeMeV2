@@ -98,11 +98,18 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     
     func generateMemedImage() -> UIImage
     {
-
+        lowToolBar.isHidden = true
+        highToolBar.isHidden = true
+     
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
+        
+        lowToolBar.isHidden = false
+        highToolBar.isHidden = false
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.imagePickView.isHidden = false
         
       return memedImage
         
