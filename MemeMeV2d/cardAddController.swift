@@ -131,12 +131,16 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         activityView.completionWithItemsHandler = {(activityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
             if completed || error == nil {
                 self.save()
+                self.dismiss(animated: true)
             }
         }
         
         present(activityView, animated:true, completion:nil)
     }
     
+    @IBAction func viewImageLists(_ sender:Any) {
+          self.dismiss(animated: true)
+    }
     
     func subscribeToKeyboardNotifications() {
         

@@ -24,10 +24,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GWa-05-ynu">
-                                <rect key="frame" x="0.0" y="60" width="375" height="563"/>
+                                <rect key="frame" x="0.0" y="104" width="375" height="470"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M3p-Rn-ta3">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="470"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
@@ -39,7 +39,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xRO-05-cQd">
-                                <rect key="frame" x="16" y="533" width="343" height="30"/>
+                                <rect key="frame" x="16" y="484" width="343" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -56,7 +56,7 @@
                                     <barButtonItem width="244" style="plain" systemItem="fixedSpace" id="Fxx-yt-X83"/>
                                     <barButtonItem title="View Memes" id="GZt-wk-1YD">
                                         <connections>
-                                            <segue destination="TjI-f7-ogX" kind="presentation" id="R9V-1b-dSV"/>
+                                            <action selector="viewImageLists:" destination="LfO-sX-mP0" id="uAG-Su-iYH"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -174,10 +174,13 @@
                     <navigationItem key="navigationItem" id="uNK-5J-prI">
                         <barButtonItem key="rightBarButtonItem" title="Edit Meme" id="nVG-a0-ONk">
                             <connections>
-                                <segue destination="LfO-sX-mP0" kind="presentation" id="hGG-tr-2Xe"/>
+                                <segue destination="LfO-sX-mP0" kind="showDetail" id="hGG-tr-2Xe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="memeTableView" destination="bJg-AH-LJe" id="q6l-OI-rCq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Bg-Bm-9l1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
