@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D909D60B20B25E6D00665CAB /* cardAddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DD9F2020A81F2700BD57B7 /* cardAddController.swift */; };
+		D911CBB72174887E00E017ED /* mmv2.gif in Resources */ = {isa = PBXBuildFile; fileRef = D911CBB62174887E00E017ED /* mmv2.gif */; };
 		D9DD9F0F20A81DA300BD57B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DD9F0E20A81DA300BD57B7 /* AppDelegate.swift */; };
 		D9DD9F1420A81DA300BD57B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9DD9F1220A81DA300BD57B7 /* Main.storyboard */; };
 		D9DD9F1620A81DA700BD57B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9DD9F1520A81DA700BD57B7 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D911CBB62174887E00E017ED /* mmv2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mmv2.gif; sourceTree = "<group>"; };
 		D9DD9F0B20A81DA300BD57B7 /* MemeMeV2d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMeV2d.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9DD9F0E20A81DA300BD57B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9DD9F1320A81DA300BD57B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,10 +47,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D911CBB52174885F00E017ED /* screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				D911CBB62174887E00E017ED /* mmv2.gif */,
+			);
+			path = screenshots;
+			sourceTree = "<group>";
+		};
 		D9DD9F0220A81DA300BD57B7 = {
 			isa = PBXGroup;
 			children = (
 				D9DD9F0D20A81DA300BD57B7 /* MemeMeV2d */,
+				D911CBB52174885F00E017ED /* screenshots */,
 				D9DD9F0C20A81DA300BD57B7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -139,6 +150,7 @@
 			files = (
 				D9DD9F1920A81DA700BD57B7 /* LaunchScreen.storyboard in Resources */,
 				D9DD9F1620A81DA700BD57B7 /* Assets.xcassets in Resources */,
+				D911CBB72174887E00E017ED /* mmv2.gif in Resources */,
 				D9DD9F1420A81DA300BD57B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
