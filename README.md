@@ -14,7 +14,7 @@ This project allows you to select an image from your album, add text to it and s
 
 ## Functions 
 
-* Select iamge for adding text to and then save as meme.
+* Select image for adding text to and then save as meme.
 * Display memes as a TableView or CollectionView.   
 * Also allow cameera to take picture for meme.
 <br>
