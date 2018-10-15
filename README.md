@@ -19,26 +19,19 @@ This project allows you to select an image from your album, add text to it and s
 * Also allow cameera to take picture for meme.
 <br>
 
-## Methods on the Main Thread
+## Loading different screens from the TableView
 
-This included using images from the devices storage, so it was interesting implementing methods for pulling up the phone album.
+The TableView also allowed an image to be brought back up, and it was interesting to see how a variety of views could be loaded onto the screen. 
 
 ``` swift
-    @IBAction func pickAnImageFromAlbum(_ sender: AnyObject) {
-        self.showImagePicker(sourceType: .photoLibrary)
-        
-    private func showImagePicker(sourceType: UIImagePickerControllerSourceType) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = sourceType
-        present(imagePicker, animated: true, completion: nil)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage { imagePickView.image = image }
-        self.dismiss(animated: true, completion: nil)
         
+        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailController") as! MemeDetailController
+        
+        detailController.meme = (UIApplication.shared.delegate as! AppDelegate).myMemes[(indexPath as NSIndexPath).row]
+        
+        self.navigationController!.pushViewController(detailController, animated: true)
     }
 ```
 <br>
